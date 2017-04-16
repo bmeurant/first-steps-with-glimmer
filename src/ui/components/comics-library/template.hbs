@@ -1,3 +1,13 @@
-<div>
-  <h1>Welcome to Glimmer!</h1>
+<h1>Comic books library</h1>
+<div class="comics">
+  <h2>Comics list</h2>
+  <ul class="comics-list">
+    {{#each comics key="@index" as |comic|}}
+      <li class="comic-item">
+        <a href="#">{{comic.title}} by {{comic.scriptwriter}}</a>
+      </li>
+    {{else}}
+      Sorry, no comic found
+    {{/each}}
+  </ul>
 </div>
