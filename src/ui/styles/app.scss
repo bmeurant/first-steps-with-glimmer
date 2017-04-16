@@ -1,3 +1,88 @@
 h1 {
   color: #444;
 }
+$light-gray: #ddd;
+
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #333;
+  max-width: 500px;
+}
+
+a {
+  color: #337ab7; 
+  text-decoration: none;
+}
+
+a:focus, a:hover {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+h1 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #eee;
+}
+
+.comics {
+  margin-bottom: 1em;
+}
+
+.comics-list {
+  padding-left: 0;
+}
+
+.comic-item {
+  display: block;
+  padding: .25em;
+  border: 1px solid $light-gray;
+  border-bottom: 0;
+  background-color: $light-gray;
+
+  &:first-child {
+    border-radius: 4px 4px 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 4px 4px;
+    border-bottom: 1px solid $light-gray;
+  }
+}
+
+.selected-comic {
+  margin-top: 1em;
+  border: 1px solid $light-gray;
+  border-radius: 4px;
+  padding: .5em;
+
+  .comic-title {
+    margin: 1em 0;
+    font-size: 1.17em;
+  }
+
+  h3.comic-title {
+    font-size: 1.3em;
+  }
+
+  .comic-detail {
+    border: 1px solid $light-gray;
+    border-radius: 6px;
+    padding: .5em;
+    background-color: $light-gray;
+    line-height: 2em;
+
+    label {
+      width: 120px;
+      font-weight: bold;
+      padding-right: .5em;
+    }
+  }
+}
+
+.delete-comic-item {
+  float: right;
+}
+
+.save-comic, .edit-comic {
+  float: right;
+}
