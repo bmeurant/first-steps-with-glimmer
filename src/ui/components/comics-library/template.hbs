@@ -5,6 +5,7 @@
     {{#each comics key="@index" as |comic|}}
       <li class="comic-item">
         <a href="#">{{comic.title}} by {{comic.scriptwriter}}</a>
+        <button class="delete-comic-item" onclick={{action deleteComic comic}}>Delete</button>
       </li>
     {{else}}
       Sorry, no comic found
