@@ -1,0 +1,21 @@
+<div class="selected-comic">
+  {{#if isEditable}}
+    <button onclick={{action save}} class="save-comic">Save</button>
+    <input id="title" class="comic-title" type="text" value="{{currentComic.title}}"/>
+  {{else}}
+    <button onclick={{action edit}} class="edit-comic">Edit</button>
+    <h3 class="comic-title">{{currentComic.title}}</h3>
+  {{/if}}
+
+  <div class="comic-detail">
+    <label>scriptwriter:</label>
+    {{#if isEditable}} <input id="scriptwriter" type="text" value="{{currentComic.scriptwriter}}"/>
+    {{else}} {{currentComic.scriptwriter}}
+    {{/if}}
+    <br>
+    <label>illustrator:</label>
+    {{#if isEditable}} <input id="illustrator" type="text" value="{{currentComic.illustrator}}"/>
+    {{else}} {{currentComic.illustrator}}
+    {{/if}}
+  </div>
+</div>

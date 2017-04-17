@@ -1,4 +1,4 @@
 <li class="comic-item">
-  <a href="#">{{@comic.title}} by {{@comic.scriptwriter}}</a>
+  <a href="#" onclick={{action @selectItem @comic}}>{{@comic.title}} by {{@comic.scriptwriter}}</a>
   <button class="delete-comic-item" onclick={{action @deleteItem @comic}}>Delete</button>
 </li>
